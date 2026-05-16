@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body{
+            display:flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        .calculator{
+             width: 400px;
+             background-color: black;
+        }
+        .btn{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            margin: 20px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        button:hover{
+            background-color: bisque;
+        }
+        input{
+            width: 393px;
+            height: 60px;
+            overflow: hidden;
+            background-color: rgb(121, 120, 120);
+            margin-bottom:20px;
+            color: white;
+            font-size:18px ;
+        }
+        .btn1{
+            background-color: rgb(224, 126, 22);
+        }
+        .btn1:hover{
+             background-color: rgb(197, 113, 23);
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="" id="display" readonly>
+        <div class="btn">
+        <button class="btn1" onclick=" addtolist('+')">+</button>
+        <button onclick="addtolist('1')">1</button>
+        <button onclick="addtolist('2')">2</button>
+        <button onclick="addtolist('3')">3</button>
+        <button class="btn1" onclick=" addtolist('-')">-</button>
+        <button onclick="addtolist('4')">4</button>
+        <button onclick="addtolist('5')">5</button>
+        <button onclick="addtolist('6')">6</button>
+        <button class="btn1" onclick=" addtolist('*')">*</button>
+        <button onclick="addtolist('7')">7</button>
+        <button onclick="addtolist('8')">8</button>
+        <button onclick="addtolist('9')">9</button>
+        <button class="btn1" onclick=" addtolist('/')">/</button>
+        <button onclick="addtolist('.')">.</button>
+        <button onclick="addtolist('0')">0</button>
+        <button onclick="calculation()">=</button>
+        <button class="btn1" onclick="clear1()">c</button>
+    </div>
+    </div>
+    <script>
+        let display = document.getElementById("display");
+        function addtolist(input){
+            display.value +=  input;
+        }
+        function calculation(){
+            try{
+            display.value = eval(display.value);
+        }
+        catch(error){
+            display.value = 'Error';
+        }
+    }
+    function clear1(){
+        display.value = "";
+    }
+    </script>
+</body>
+</html>
