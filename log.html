@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            height: 100px;
+            width: 250px;
+            padding: 2%;
+            text-align: center;
+            border-radius: 20px;
+            background-color: aqua;
+            animation: coding 20s ease-in-out 0s infinite alternate;
+        }
+        @keyframes coding {
+             0%{transform: translate(0px);} 
+            20%{transform: translate(200px);}
+            40%{transform: translate(300px);}
+            60%{transform: translate(200px);}
+            80%{transform: translate(100px);}
+           100%{transform: translate(0px);}
+            
+        }
+        button{
+            border-radius: 5px;
+            background-color: aqua;
+            animation: ballu 10s ease-in-out 1s infinite alternate;
+        }
+        @keyframes ballu {
+            from{background-color: aqua;}
+            to{background-color: blue;}
+        }
+        input{
+            background-color: white;
+            animation: bujji 10s ease-in-out 2s infinite alternate;
+        }
+        @keyframes bujji{
+            from{background-color: white;}
+            to{background-color: rgb(225, 144, 45);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="username">Name:</label>
+        <input type="text" placeholder=""><br><br>
+        <label for="passwword">password:</label>
+        <input type="password" placeholder=""><br><br>
+        <button> sumbit</button>
+    </div>
+</body>
+</html>
