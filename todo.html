@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <style>
+        body{
+            margin : 0px;
+            padding: 0px;
+            text-align: center;
+        }
+        #todo{
+            margin: 300px 500px;
+            background-color: bisque;
+        }
+        .todo{
+            font-size: 25px;
+            font-weight: 600px;
+            color: black;
+        }
+        .inputtext{
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            background-color:rgb(233, 240, 237);
+        }
+        .add{
+            padding: 5px;
+            background-color: blue;
+        }
+        li{
+            list-style: none;
+            color: rgb(230, 10, 10);
+            margin-right: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="todo">
+    <span class="todo">TODO</span>
+    <div>
+    <input type="text" placeholder="enter the list:" class="inputtext">
+    <button class="add" onclick="add()">Add</button>
+    </div>
+    <ul class="list"></ul>
+    </div>
+    <script>
+        function add(){
+            let inputtext = document.querySelector(".inputtext");
+            let inputvalue = inputtext.value.trim();
+
+            if(inputvalue === ""){
+                return alert(' enter the task');
+            }
+
+            let li = document.createElement("li");
+            li.textContent = inputvalue; 
+
+            li.onclick = function(){
+                this.remove();
+            }
+            
+            
+            document.querySelector(".list").appendChild(li);
+
+            inputvalue.value = "";
+        }
+    </script>
+</body>
+</html>
