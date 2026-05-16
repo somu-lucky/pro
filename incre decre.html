@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asc and desc</title>
+    <style>
+        body{
+           margin: 0px;
+           padding: 0px;
+        }
+        .container{
+            background-color: black;
+            color: white;
+            height: 400px;
+            width: 400px;
+            text-align: center;
+        }
+        h2{
+            padding: 20px;
+            font-size: 30px;
+        }
+        button{
+            padding:15px;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="textd">0</h2>
+        <button id="asc-btn" onclick="asc()">asc</button>
+        <button id="desc-btn" onclick="desc()">desc</button>
+    </div>
+    <script>
+        let textd = document.getElementById('textd');
+        let ascbtn =document.getElementById('asc-btn');
+        let descbtn = document.getElementById('desc-btn');
+        var i=0;
+        function asc(){
+            i++;
+            textd.innerHTML=i;
+            
+        }
+         function desc(){
+            i--;
+            textd.innerHTML=i;
+            
+        }
+        </script>
+    
+</body>
+</html>
